@@ -2,7 +2,7 @@ group 'com.mews.kiosk_mode'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = "1.9.24"
+    ext.kotlin_version = "1.7.20"
     repositories {
         google()
         mavenCentral()
@@ -38,6 +38,10 @@ android {
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_17
+    }
+
+    kotlin {
+     jvmToolchain(17)
     }
 
     sourceSets {
